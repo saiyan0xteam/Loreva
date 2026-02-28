@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "gameId": "minecraft-java",
+  "packType": "block",
+  "gameVersion": "RD20090510",
+  "addedDate": "05.10.2009",
+  "entities": [
+    {
+      "id": "minecraft:air",
+      "type": "Block",
+      "name": "Air",
+      "imageUrl": "https://ik.imagekit.io/tresr9ezm/Loreva/minecraft-java/air.png",
+      "description": "The empty block, only used for world generator.",
+      "tags": ["air", "void"],
+      "addedDate": "05.10.2009",
+      "stackMax": 64,
+      "tool": "None",
+      "resistance": 0,
+      "hardness": 0,
+      "luminance": 0,
+      "transparent": true,
+      "flammable": false,
+      "catchfire": false,
+      "command": "/give @p minecraft:air",
+      "notes": [
+        {
+          "title": "Types",
+          "body": "Air is an invisible block used to define empty space where any other blocks could otherwise exist.\nCave air is the underground air found in caves and some generated structures.\nVoid air is used internally for blocks above (Y>319) and below (Y<-64) the world, and in unloaded chunks."
+        },
+        {
+          "title": "Obtaining",
+          "body": "The block is completely unobtainable without cheat commands. Air can be destroyed or created only by the placement or removal of other blocks respectively.\n\nUpon world generation, all otherwise empty spaces are occupied by air. Badlands, Mineshafts, Lava Lakes and Underground Structures generate cave air. Void air is used in place of unloaded chunks and above or below the world's buildable area."
+        },
+        {
+          "title": "Usage",
+          "body": "Air shares some properties with non-solid blocks, including allowing the player or mob to move within that space without suffocating, and also to catch their breath if they are drowning in water.\n\nAir can be visualized with the use of structure blocks in save mode. With 'Show invisible blocks' enabled, the air is represented as small blue cubes. All air types are displayed identically as blue cubes.\n\nAir can be used to clearing blocks with the /fill command, an example is /fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:air (clears a 11x11x11 cube of space centered on what executed the command.).\n\nCave air and void air have no special properties; they function the same as normal air. "
+        }
+      ],
+      "references": [
+        {
+          "label": "Minecraft Fandom — Air",
+          "url": "https://minecraft.fandom.com/wiki/Air",
+          "type": "wiki"
+        }
+      ]
+    }
+  ]
+}

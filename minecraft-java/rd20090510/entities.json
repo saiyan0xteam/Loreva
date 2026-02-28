@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "gameId": "minecraft-java",
+  "packType": "entity",
+  "gameVersion": "RD20090510",
+  "addedDate": "05.10.2009",
+  "entities": [
+    {
+      "id": "minecraft:player",
+      "type": "entity",
+      "name": "Player",
+      "description": "The player is the main controlled character in Minecraft.",
+      "tags": ["player", "controlled", "character"],
+      "imageUrl": "https://ik.imagekit.io/tresr9ezm/Loreva/minecraft-java/steveface.jpg",
+      "addedDate": "05.10.2009",
+      "health": "20 (❤ x 10)",
+      "behavior": "Controlled (Anytime)",
+      "spawn": "Player Spawn Point",
+      "damage": "5 (2.5 ❤)",
+      "size": "Width: 0.6 Blocks, Height: 1.8 Blocks",
+      "equipableArmors": "Leather, Iron, Gold, Diamond, Netherite",
+      "armor": "Depends on Armor Level",
+      "notes": [
+        {
+          "title": "Appearance",
+          "body": "There are nine default player skins, known as Steve, Alex, Noor, Sunny, Guy , Zuri, Makena, Kai, and Efe, assigned to each player based on their account ID if they do not use a custom skin.\n\nThe player's skin can be changed. The nine default skins also have 'classic' and 'slim' shapes.\n\nThe player's appearance is commonly obscured by equipped armor such as turtle shells, as well as other equipable items such as elytra, carved pumpkins, and heads. Players are also the only entity capable of having capes, as well as deadmau5 ears, depending on the account.\n\nIf shot with an arrow or stung by a bee, the arrow/stinger will appear physically embedded inside of the player for a given time. These do not apply to other mobs."
+        },
+        {
+          "title": "Drops",
+          "body": "Contents of their inventory and armor unless '/gamerule keepInventory' has been set to true. Current XP points minus current XP level times 7, capped at a total of 100 XP points. If '/gamerule keepInventory' has been set to true, no XP will be dropped."
+        },
+        {
+          "title": "Reach",
+          "body": "A player has two kinds of reach. The attack area forms a three-dimensional cylinder because it encompasses vertical and horizontal distances. The building reach forms a sphere.\nThe attack reach, which is 3 blocks\nThe building reach, which is 4.5 blocks"
+        },
+        {
+          "title": "Health and Hunger Meters",
+          "body": "The player has 10 full hearts or 20 health points. One full heart represents two health points. When the player's hunger bar is at 18 (🍗 × 9) or higher, health slowly regenerates by (1 ❤) every four seconds, but when it is at 20 (🍗 × 10) with saturation remaining, health regenerates by (1 ❤) every half second. The hunger bar depletes faster from energy-intensive activities like sprinting, jumping, attacking mobs, and mining, and it can be refilled by eating food. If the hunger bar is at 17 (🍗 × 8.5) or lower, the player does not regenerate health unless in Peaceful difficulty (or under the effect of certain potions). While the hunger bar is at 0 (🍗), the player is starving and proceeds to lose health. On Hard difficulty, starvation kills the player. On Normal difficulty, it brings health down to (1 ❤). On Easy difficulty, it brings health down to (10 ❤). On Peaceful difficulty, the health bar recovers regardless of hunger, but still depletes from starvation damage, and the hunger bar does not lose any points even when under the effect of hunger.\n\n# Respawn immunity\nThe player does not take damage for 60 game ticks (3 seconds) upon respawning from death. Since 24w45a, this is patched."
+        },
+        {
+          "title": "Movement",
+          "body": "Walking: 4.317 Speed (m/s) - 15.54 Speed (km/h) - 100% of Walking Speed\nSprinting: 5.612 Speed (m/s) - 20.20 Speed (km/h) - 130% of Walking Speed\nSneaking or Crawling: 1.295 Speed (m/s) - 4.633 Speed (km/s) - 30% of Walking Speed\nFlying: 10.889 Speed (m/s) - 39.2 Speed (km/s) - 252% of Walking Speed\nSprint Flying: 21.778 Speed (m/s) - 78.4 Speed (km/s) - 504% of Walking Speed\nFalling (Terminal Velocity): 78.4 Speed (m/s) - 282.24 Speed (km/h) - 1816% of Walking Speed\n\nThere isn't a simple hard-coded maximum velocity for walking, sprinting, etc. The maximum is a result of a base acceleration countered by 'friction' or air resistance. The base acceleration for walking is 0.098, and sprinting is 30% faster than that. Velocity is increased by this acceleration value every tick (1/20th of a second), then the player is moved by the resulting velocity, then the velocity is multiplied by the friction value of the block they are walking on. For most blocks, the friction value is 0.546. As the player walks forward, each tick their velocity goes +0.098, *0.546, +.098, *0.546, +0.098, and so on. The result is that eventually, the 0.546 multiplier counteracts the 0.098 increase, so the player doesn't go any faster. The formula for this 'terminal velocity' is a/(1-r), where a is the acceleration, and r is the block's friction. 0.098/(1-0.546) ≈ 0.2159 meters/tick = 4.317 meters/second. Sprinting is 30% faster than that; About 5.612 meters/second. Flying is similar, but the base acceleration is 0.49 and the 'friction' is 0.91, which comes out to ~10.89 m/s.\n\nThe player walks at a nominal rate of 4.317 meters (blocks) per second. That's about 15.5 kph or 9.7 mph, which is a 3:51 kilometer or a 6:12 mile. This means that the player can walk a total of 5181 blocks (5.2 km) in one Minecraft day, if walking in a straight line, ignoring hunger, and not sprinting or sneaking. For sneaking and sprinting statistics, see below.\n\n# Sprinting\nThe player can sprint, draining the hunger bar considerably while doing so. The player sprints approximately 5.612 blocks per second, as opposed to the regular pace of 4.317. That's 20.2 kph or 12.6 mph, which is a 2:58 km or a 4:46 mile. The player can usually jump four blocks horizontally when sprinting, although they can jump five blocks with a correctly timed jump and enough momentum. The swiftness effect increases momentum. The player cannot sprint if the hunger bar is at (6 🍗) or less. Sprinting is activated by double-tapping the forward key (default W), then holding it, or by holding the sprint key (Ctrl [⌘ Cmd if using a Mac] by default) while pressing the forward key. Holding the sprint key in Creative mode while flying causes the player to fly faster.\n\n# Sneaking\nSneaking is a feature activated by pressing and holding the sneak key (default is ⇧ Shift). Sneaking prevents players from falling more than half a block, making it highly useful for building horizontally outward over space. Going past the edge of a block and stopping sneaking does not result in falling off that block. The player can still dismount blocks while sneaking by jumping over the block's edge. In Multiplayer Mode, a player's name tag will be grayed out in Java Edition or will become more transparent in Bedrock Edition when they sneak, to relate to the fact that sneaking will make them harder to see.\n\n# Jumping\nThe maximum height a player can jump without the jump boost effect is about 1.2522 blocks (1 1⁄4 blocks) in Java Edition. The jump height on Bedrock Edition is shorter because the game uses an outdated, pre-Combat Update value of 1.1875 (1 3⁄16 blocks).\n\n# Swimming\nSwimming occurs when the player is sprinting (by double pressing W or pressing Ctrl/Cmd) while the player is submerged underwater. Swimming has the same animation as crawling.\n\n# Crawling\nCrawling occurs when the player is in an area less than 1.5 blocks high and prevents suffocation. Crawling will also work in Bedrock Edition if the player goes from swimming into a one-block-high area straight after exiting the water."
+        },
+        {
+          "title": "Gameplay HUD",
+          "body": "The onscreen heads-up display (HUD) consists of the player's health bar, hunger bar, experience bar, and hotbar. The armor rating bar appears above the health bar if the player is wearing armor and the oxygen bar appears if the player is submerged in water or is suffocating in a block. The HUD also contains the crosshair and a held object or fist. The HUD can also be toggled by F1.\n\nAs mentioned in the Gamemodes section, if the player is in Creative mode the health, hunger, and experience bars including armor rating and oxygen bubbles are hidden and only the hotbar is visible. Despite this, the player can still collect experience, wear armor, and will still display the screen tilting animation when dying from /kill or the void. In Spectator mode even the hotbar, crosshair, and held object/fist are hidden and the hotbar only appears as a player spectating list when a number is pressed or the mouse is scrolled."
+        },
+        {
+          "title": "Experience",
+          "body": "Experience points (XP) can be gained via experience orbs when killing mobs or mining certain minerals. The current level is indicated by a green number above the HUD, and the experience points can be used to enchant weapons, tools, or armor with different useful attributes and skills (see enchanting table). Anvils require experience to use.\n\nThe level increases by obtaining enough experience points. All levels and points are lost upon death but can be partially restored by picking up the experience orbs at the place of death.\n\nExperience is also obtained through activities such as mining, fishing, mob breeding, killing certain mobs, trading, or smelting."
+        },
+        {
+          "title": "Game Modes",
+          "body": "In Survival mode, the player can place and destroy most blocks, and use all tools available. The player has limited health (❤ icons), hunger (🍗 icons), and oxygen (bubble icons)\n\nIn Creative mode, the player can fly by double-tapping the jump key (default Space) and place an infinite number of blocks, but with limited use of crafting and tools. No mobs will attack the player. The player cannot take damage (at all in Bedrock Edition, and in Java Edition only when falling into the Void or typing the command /kill), has no hunger and has unlimited oxygen, and breaking blocks is instantaneous.\n\nIn Hardcore mode, the player can respawn only in Spectator mode, and the difficulty level is locked on Hard mode.\n\nIn Adventure mode, there are no changes from Survival mode aside from being unable to break or place blocks unless they possess a tool with the CanDestroy NBT data tag for that block, or have a block with the CanPlaceOn tag. This game mode can be played only by having cheats enabled and typing the command /gamemode adventure, /gamemode a‌[Bedrock Edition only], /gamemode 2‌[Bedrock Edition only], or by opening a multiplayer (including LAN) world.\n\nIn Spectator mode, the player can spectate almost all mobs, ride them as if the player were in a minecart, fly through blocks, and open inventories, but cannot break blocks or change inventories. Along with Adventure, it can be accessed by typing in /gamemode spectator, pressing F3+F4 until Spectator mode (the eye of ender) is selected or F3+N while cheats are enabled, or dying in Hardcore mode. However, with the Debug Mode world type, the gamemode is locked as Spectator mode unless changed with cheats enabled."
+        },
+        {
+          "title": "Username",
+          "body": "Players in-game are referred to by a username. These are used to target the player with commands and differentiate other players.\n\nUsernames must be 3–16 characters, although there are exceptions for players with under 3 characters, who bought the game early in its development. There are four people who have done this, their usernames being 'G', 'F', 'X', and '8'. Players can change their username no more than once every 30 days. When the player changes their username, the previous username is available for other users to claim after 37 days. Because players can change usernames every 30 days, a player can manage two usernames without anyone being able to take either of them. If the player has a username under 3 characters and changes it, the old sub-3-character username is permanently unable to be obtained again. This also applies for symbol names. The username can be changed on the preferences page of minecraft.net.\n\nPlayer names appear above their head as nameplates, typically in white letters within a dark transparent rectangle. Player nameplates can also be seen through solid blocks and other obstructions, although a player can sneak to dim the nameplate's visibility when in sight."
+        },
+        {
+          "title": "Customization",
+          "body": "Players can change skins on the preferences page of minecraft.net or the Minecraft Launcher by uploading a PNG image file, which then replaces the default skin. Players also have the option to have three or four pixel-wide arms on the character model."
+        }
+      ],
+      "references": [
+        {
+          "label": "Minecraft Fandom — Player",
+          "url": "https://minecraft.fandom.com/wiki/Player",
+          "type": "wiki"
+        }
+      ]
+    }
+  ]
+}
